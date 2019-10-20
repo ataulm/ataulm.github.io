@@ -15,7 +15,7 @@ Building the site so that it can be pushed is done using `build`:
 bundle exec jekyll build
 ```
 
-Then commit and push to master.
+Then commit and push to master. GitHub will automatically generate the `_site` so there's no need to commit this (see `.gitignore`). Though the first build will take about 10 minutes, subsequent pushes seem to update within a minute, then the updated content should be available on [ataulm.github.io](https://ataulm.github.io).
 
 ## Writing posts
 
@@ -41,4 +41,3 @@ author: jorge
 ## Theming
 
 I bought a theme called [Simples](https://jekyllthemes.io/theme/simples-blog-jekyll-theme) which I've saved in a [private repository here](https://github.com/ataulm/ataulm.github.io-simples) (due to the license, can't keep the source of the theme in this public repo).
-
