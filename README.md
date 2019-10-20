@@ -29,3 +29,5 @@ layout: post
 title: Blogging Like a Hacker
 ---
 ```
+
+The `date` (UTC) in a front matter block can be used to override the date from the file name, and posts dated in the future (at the time the site is generated) won't be shown.
