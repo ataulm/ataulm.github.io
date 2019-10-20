@@ -5,7 +5,9 @@ excerpt: The typical way to apply a theme overlay is using the `android:theme` a
 
 I watched [Developing Themes with Style](https://chris.banes.dev/talks/2019/developing-themes-with-style/) a couple of weeks ago and learned everything about themes and styles that I’d deferred for the last six years.
 
-<center><blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/chrisbanes?ref_src=twsrc%5Etfw">@chrisbanes</a> 😍 this diagram (and preceding guide) is what I needed in my life. right now. <a href="https://t.co/vsKBILYZyr">pic.twitter.com/vsKBILYZyr</a></p>&mdash; a-ta-ul 🎫 (@ataulm) <a href="https://twitter.com/ataulm/status/1178072218317852672?ref_src=twsrc%5Etfw">September 28, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+<center>
+<blockquote class="twitter-tweet" data-dnt="true" data-theme="light"><p lang="en" dir="ltr"><a href="https://twitter.com/chrisbanes?ref_src=twsrc%5Etfw">@chrisbanes</a> 😍 this diagram (and preceding guide) is what I needed in my life. right now. <a href="https://t.co/vsKBILYZyr">pic.twitter.com/vsKBILYZyr</a></p>&mdash; a-ta-ul 🎫 (@ataulm) <a href="https://twitter.com/ataulm/status/1178072218317852672?ref_src=twsrc%5Etfw">September 28, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
 
 One of the concepts that was new to me was theme overlays. It’s a powerful technique that allows us to override only the attributes that are specified in the overlay itself.
 
@@ -169,4 +171,4 @@ class MyCustomView(ctx: Context, attrs: AttributeSet) : View(
 
 Apart from that, there’s an [open issue on the Material Components Android repository](https://github.com/material-components/material-components-android/issues/665) to open the class so that we can use this function directly, which could do with some thumbs up.
 
-Let me know if you found this post useful by reaching out on Twitter, [@ataulm](https://twitter.com/ataulm).
+Let me know if you found this post useful by [reaching out on Twitter](https://twitter.com/ataulm/status/1183681155423526913).
