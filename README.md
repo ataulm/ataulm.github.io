@@ -40,4 +40,4 @@ author: jorge
 
 ## Theming
 
-I bought a theme called [Simples](https://jekyllthemes.io/theme/simples-blog-jekyll-theme) which I've saved in a [private repository here](https://github.com/ataulm/ataulm.github.io-simples) (due to the license, can't keep the source of the theme in this public repo).
+I bought a theme called [Simples](https://jekyllthemes.io/theme/simples-blog-jekyll-theme) which I've saved in a [private repository here](https://github.com/ataulm/ataulm.github.io-simples) (due to the license, can't keep the source of the theme in this public repo), but I'm not sure how to use it with GH Pages deployment 🤔.
