@@ -21,19 +21,11 @@ Then commit and push to master. GitHub will automatically generate the `_site` s
 
 Create new posts in `_posts`. Posts should be named in the format `YEAR-MONTH-DAY-title.markdown`.
 
-There's a metadata block at the top of each post I think is used to define (and override) attributes that the site/theme can use ([example from Jorge's blog](https://raw.githubusercontent.com/JorgeCastilloPrz/jorgecastilloprz.github.io/source/_posts/2019-10-12-dependency-inversion-on-android-theming.md)):
+We can add a [front matter block](https://jekyllrb.com/docs/front-matter/) at the top of each post (or any file) where we can override custom attributes or define new ones:
 
 ```
 ---
 layout: post
-current: post
-cover: assets/images/painting2.jpg
-navigation: True
-title: Dependency Inversion on Android Theming
-date: 2019-10-11 12:36:00
-tags: [android, kotlin]
-class: post-template
-subclass: 'post'
-author: jorge
+title: Blogging Like a Hacker
 ---
 ```
