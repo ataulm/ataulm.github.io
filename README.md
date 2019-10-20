@@ -15,7 +15,7 @@ Building the site so that it can be pushed is done using `build`:
 bundle exec jekyll build
 ```
 
-Then commit and push to master.
+Then commit and push to master. GitHub will automatically generate the `_site` so there's no need to commit this (see `.gitignore`). Though the first build will take about 10 minutes, subsequent pushes seem to update within a minute.
 
 ## Writing posts
 
