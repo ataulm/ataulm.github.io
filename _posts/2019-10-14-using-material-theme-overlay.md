@@ -104,7 +104,7 @@ When we write views, we can specify a default style resource (`defStyleRes: Int`
 
 We didn’t write `MaterialButton`, but we can still override the default style because it also specifies a `defStyleAttr`—a default style theme attribute, which we can set in our theme, and it’ll use this instead of the default style resource:
 
-```xml
+```kotlin
 MaterialButton(Context context, AttributeSet attrs) {
   this(context, attrs, R.attr.materialButtonStyle);
 }
