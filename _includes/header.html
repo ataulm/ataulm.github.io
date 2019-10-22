@@ -5,10 +5,6 @@
 			<img src="{{ site.data.settings.header_settings.avatar_image | relative_url }}" class="header__avatar__img">
 		</a>
 		{% endif %}
-
 		{% include socials.html %}
-		{% if site.google_analytics and jekyll.environment == 'production' %}
-		{% include analytics.html %}
-		{% endif %}
 	</div>
 </header>

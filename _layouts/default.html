@@ -46,7 +46,8 @@
 	{% if site.data.settings.advanced_settings.analytics_code %}
 	
 	<!-- Analytics Code -->
-	{{ site.data.settings.advanced_settings.analytics_code }}
+	{% if site.google_analytics and jekyll.environment == 'production' %}
+	{% include analytics.html %}
 	{% endif %}
 	{% if site.data.settings.advanced_settings.header_js %}
 	
