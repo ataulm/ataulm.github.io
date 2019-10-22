@@ -134,8 +134,6 @@ The important takeaway from this post is that an attribute’s value is determin
 
 "Base" values in the theme is a bit of a misnomer too. We can use `ContextWrapper` to _overlay_ themes on top of each other. In this case, the overlays applied at the top/outer layer are checked first, and can override attributes from theme overlays/themes in the base layers.
 
-TK: redo conclusion
-
 With this in mind, what’s next? We learned about `materialThemeOverlay` in another post and how we can add support to our custom views for this attribute. It works using a `ContextThemeWrapper` passing the value of `materialThemeOverlay` (if specified).
 
-In our next post, we’ll demonstrate how we can support `materialThemeOverlay` without modifying your custom view to handle it explicitly, as well as support theme _includes_ with the same technique.
+In our next post, we’ll use what we’ve learned here to demonstrate why it’s necessary to do add support for this attribute explicitly, and show how we can add limited support for mix and match styles.
