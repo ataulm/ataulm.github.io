@@ -318,6 +318,10 @@
 
 		});
 
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Tweets
+		// Ajax breaks the Tweet load script, so we have to call the load function explicitly
+		// https://wordpress.stackexchange.com/questions/69171/embedded-twitter-feed-wont-render-nicely-when-loaded-via-ajax
+		twttr.widgets.load();
 	}
 
 	// Run functions on load
