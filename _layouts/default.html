@@ -4,7 +4,6 @@
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	{{ site.data.settings.basic_settings.site_title }}
 	- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -39,18 +38,16 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.1.1/js/fontawesome.js" integrity="sha384-NY6PHjYLP2f+gL3uaVfqUZImmw71ArL9+Roi9o+I4+RBqArA2CfW1sJ1wkABFfPe" crossorigin="anonymous"></script>
 
 	{% if site.data.settings.advanced_settings.custom_styles %}
-
 	<!-- Custom Styles -->
 	<style>{{ site.data.settings.advanced_settings.custom_styles }}</style>
 	{% endif %}
-	{% if site.data.settings.advanced_settings.analytics_code %}
 	
-	<!-- Analytics Code -->
 	{% if site.google_analytics and jekyll.environment == 'production' %}
+	<!-- Analytics Code -->
 	{% include analytics.html %}
 	{% endif %}
-	{% if site.data.settings.advanced_settings.header_js %}
 	
+	{% if site.data.settings.advanced_settings.header_js %}
 	<!-- Extra Header JS Code -->
 	{{ site.data.settings.advanced_settings.header_js }}
 	{% endif %}
