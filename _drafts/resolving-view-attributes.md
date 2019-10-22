@@ -1,6 +1,6 @@
 ---
 title: Resolving View Attributes on Android
-excerpt: TODO write excerpt
+excerpt: When a view is inflated from XML, where does Android look to determine the value of the view's attributes? We’ll go through an example showing how to define and use custom attributes, and how Android will resolve them when the view is inflated.
 ---
 
 When we write custom views, it’s not uncommon for us to define new attributes so that we can allow instances to be configured. Let’s look at how we define and use them, and then we’ll look into how attributes are resolved.
