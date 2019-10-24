@@ -137,7 +137,7 @@ font_settings:
     letter_spacing: 0
 
 advanced_settings:
-  ajax_loading: true
+  ajax_loading: false # Google Analytics is fudging up with ajax
   analytics_code: ""
   custom_styles: ""
   header_js: ""
