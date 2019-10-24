@@ -136,4 +136,4 @@ The important takeaway from this post is that an attribute’s value is determin
 
 With this in mind, what’s next? We learned about `materialThemeOverlay` in another post and how we can add support to our custom views for this attribute. It works using a `ContextThemeWrapper` passing the value of `materialThemeOverlay` (if specified).
 
-In our next post, we’ll use what we’ve learned here to demonstrate why it’s necessary to do add support for this attribute explicitly, and show how we can add limited support for mix and match styles.
+In our next post, we’ll use what we’ve learned here to demonstrate why it’s necessary to do add support for this attribute in our custom views explicitly, and show how we can add limited support for mix and match styles.
