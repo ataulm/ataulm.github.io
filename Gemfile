@@ -4,5 +4,3 @@ source "https://rubygems.org"
 # See https://pages.github.com/versions/
 gem "github-pages", "~> 201", group: :jekyll_plugins
 
-# Theme
-gem "minima", "~> 2.5"
