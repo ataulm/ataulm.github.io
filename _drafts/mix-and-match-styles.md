@@ -5,7 +5,11 @@ excerpt: Let’s see how we can leverage a custom view inflater to implement (li
 
 Themes and styles on Android can extend from another style, overriding or specifying additional attributes. It’s a single inheritance model where a style can’t have two parents.
 
-TK image showing the boxes extending only one style at a time. 
+![](/images/mix-and-match-styles/single-inheritance.png)
+
+What we'd really like is to be able to include attributes from multiple styles.
+
+![](/images/mix-and-match-styles/multiple-inheritance.png) 
 
 Some other frameworks _do_ allow this, like [mixins in Sass](https://sass-lang.com/documentation/at-rules/mixin). The question is, how can we do this on Android?
 
