@@ -110,7 +110,7 @@ val typedArray = context.obtainStyledAttributes(attrs, R.styleable.SpottyFrameLa
 
 If it can’t find it, it’ll check the style resource (if one was set on the view).
 
-![](/images/resolving-view-attrs/style-res.png)
+TK ![](style resource)
 
 The attributes from the style resource aren't resolved and "imported" into the attribute set. If they were, then we would be unable to differentiate between the values we set on the view and the values from the style resource. Since they're not, we can override attributes specified in the style by setting it on the view itself in XML. 
 
