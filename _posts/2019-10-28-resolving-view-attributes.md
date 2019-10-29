@@ -164,4 +164,4 @@ The important takeaway from this post is that an attribute’s value is determin
 
 With this in mind, what’s next? We learned about `materialThemeOverlay` in the previous post and how we can add support to our custom views for this attribute. In our next post, we'll learn why it's _necessary_ to add support explicitly, and why it's not possible for the layout inflater to handle it on our behalf.
 
-Please [let me know if you found this post helpful](https://twitter.com/ataulm), or if you have any comments or questions (or corrections!).
+Please [let me know if you found this post helpful](https://twitter.com/ataulm/status/1188846659784118274), or if you have any comments or questions (or corrections!).
