@@ -14,7 +14,7 @@
 
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="{{ site.data.settings.social_settings.twitter_handle }}">
+	<meta name="twitter:site" content="@{{ site.twitter_username }}">
 	<meta name="twitter:title" content="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}">
 	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ page.excerpt }}{% endif %}">
 	<meta name="twitter:image" content="{{ page.featured_image | absolute_url }}">
