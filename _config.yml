@@ -20,7 +20,7 @@
 
 title: Ataul Munim
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ataulm.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ataulm
 google_analytics: UA-150476569-1
 
