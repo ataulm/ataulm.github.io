@@ -1,15 +1,87 @@
 ---
-title: Mix and Match Styles on Android
-excerpt: Let’s see how we can leverage a custom view inflater to implement (limited) support for mix and match styles. We’ll also revisit `materialThemeOverlay` to understand why we needed to add explicit support for this attribute in our custom views.
+title: Backporting New View Attributes on Android
+featured_image: /images/backporting-view-attrs/multiple-inheritance.png
+excerpt: When the latest release of Android introduces a new view attribute, how can we use it on older versions? This article looks at `android:theme` and `materialThemeOverlay` and the differences in how they're supported.
 ---
+
+When the latest release of Android introduces a new view attribute, how can we use it on older versions? Android 5.0 added support for `android:theme`, allowing us to specify a theme overlay on a view in XML. Devices running older versions of Android would simply ignore the attribute since they wouldn't recognise it, until support was added via AppCompat.
+
+Let's try to add some new view attributes of our own and we'll look at how `android:theme` was backported, as well as how (and why) `materialThemeOverlay` is implemented differently.
+
+### Implementing mixins on Android
+
+Styles on Android can extend from a parent style, overriding or specifying additional attributes. It’s a single inheritance model where a style can’t have two parents.
+
+![](/images/backporting-view-attrs/single-inheritance.png)
+
+A mixin is a class with functionality that can be added to another, without that other class having to extend it. This allows that other class to _mix in_ logic and functions from multiple classes at once, like multiple inheritance without the inheritance. What if we could do this with Android styles?
+
+![](/images/backporting-view-attrs/multiple-inheritance.png) 
+
+Here, we've defined two mixins, `LargeText` and `BlueText`, as well as a style for a text view, which extends from the Material Components' text view style.
+
+```xml
+<style name="Mixin.Demo.LargeText" parent="">
+    <item name="android:textSize">24sp</item>
+</style>
+
+<style name="Mixin.Demo.BlueText" parent="">
+    <item name="android:textColor">@color/material_blue_500</item>
+</style>
+
+<style name="Widget.Demo.TextView" parent="Widget.MaterialComponents.TextView">
+    <item name="include">@style/Mixin.Demo.LargeText</item>
+    <item name="include2">@style/Mixin.Demo.BlueText</item>
+</style>
+```
+
+We want this:
+
+```xml
+<TextView
+    style="@style/Widget.Demo.TextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hello Android!" />
+```
+
+to yield a nice text view with large, blue text:
+
+TK image
+
+### Theme overlays
+
+This should be possible by layering theme overlays. We read in the [last post how view attributes are resolved]({% post_url 2019-10-28-resolving-view-attributes %}), where the theme is the last place the view will look for an attribute. If there are multiple layers of themes (application, activity or view), then it'll search for a particular attribute on the 
+
+connect 4 analogy
+
+
+
+### Writing a custom layout inflater
+
+
+
+### Conclusion
+
+- layout inflater can't be used to backport new view attributes
+- 
+
+
+
+
+
+
+
+
+
 
 Themes and styles on Android can extend from another style, overriding or specifying additional attributes. It’s a single inheritance model where a style can’t have two parents.
 
-![](/images/mix-and-match-styles/single-inheritance.png)
+![](/images/backporting-view-attrs/single-inheritance.png)
 
 What we'd really like is to be able to include attributes from multiple styles.
 
-![](/images/mix-and-match-styles/multiple-inheritance.png) 
+![](/images/backporting-view-attrs/multiple-inheritance.png) 
 
 Some other frameworks _do_ allow this, like [mixins in Sass](https://sass-lang.com/documentation/at-rules/mixin). The question is, how can we do this on Android?
 
