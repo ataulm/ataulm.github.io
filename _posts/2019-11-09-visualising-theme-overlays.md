@@ -1,7 +1,7 @@
 ---
 title: Visualising Theme Overlays
 featured_image: /images/visualising-theme-overlays/feature.png
-excerpt: A theme is just a style, used to define theme attributes. Let's use Connect 4 to visualise how Android theme overlays are applied, and the effect on attribute resolution.
+excerpt: Let's use Connect 4 to visualise how Android theme overlays are applied, and the effect on attribute resolution.
 ---
 
 ![](/images/visualising-theme-overlays/feature.png)
