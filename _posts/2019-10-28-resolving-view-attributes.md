@@ -349,3 +349,5 @@ There’s two important takeaways from this post:
 Now that we understand default style resources better, let’s revisit `materialThemeOverlay` from an [earlier post in this series]({% post_url 2019-10-14-using-material-theme-overlay %}) to take a deeper look at _why_ it was necessary to add explicit support for this attribute in our custom views, and why it’s not possible for the layout inflater to handle it on our behalf.
 
 Please [let me know if you found this post helpful](https://twitter.com/ataulm/status/1188846659784118274), or if you have any comments or questions (or corrections!).
+
+_Thanks [Chris](https://twitter.com/chrisbanes) for the review._
