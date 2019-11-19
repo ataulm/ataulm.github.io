@@ -86,7 +86,7 @@ The other way we can do this is by passing a theme resource ID directly to the b
 
  
 ```kotlin
-MaterialAlertDialogBuilder(context, R.style.Theme_Demo_Dialog)
+MaterialAlertDialogBuilder(context, R.style.ThemeOverlay_Demo_Dialog)
 ```
  
 Whichever approach we take, this is what we end up with:
