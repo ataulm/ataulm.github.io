@@ -145,13 +145,7 @@ This works on Android 5 and above (or earlier if we’re using an AppCompat or M
 
 There’s a couple of cases where `ContextThemeWrapper` is exclusively helpful. For example, [with data binding](https://github.com/google/iosched/blob/89df01ebc19d9a46495baac4690c2ebfa74946dc/mobile/src/main/java/com/google/samples/apps/iosched/ui/sessiondetail/SessionDetailFragment.kt#L114-L119), since `android:theme` can’t be used or in the case of `materialThemeOverlay`, being able to add support for theme overlays in default style resources without breaking support for `android:theme`.
 
-In our next post, we’ll look at how `android:theme` was backported in more detail.
-
-As always, let me know if you have any comments, questions or corrections:
-
-<center>
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I wrote about ContextThemeWrapper on Android, with a short example showing how it can be used with alert dialogs.<br><br>Thanks <a href="https://twitter.com/crafty?ref_src=twsrc%5Etfw">@crafty</a> for the 👀!<a href="https://t.co/Ew2ewfmD6b">https://t.co/Ew2ewfmD6b</a> <a href="https://twitter.com/hashtag/androiddev?src=hash&amp;ref_src=twsrc%5Etfw">#androiddev</a> <a href="https://twitter.com/hashtag/gde?src=hash&amp;ref_src=twsrc%5Etfw">#gde</a></p>&mdash; a-ta-ul ✏️ (@ataulm) <a href="https://twitter.com/ataulm/status/1196919491646509057?ref_src=twsrc%5Etfw">November 19, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</center>
+In our next post, we’ll look at how `android:theme` was backported in more detail. As always, [let me know](https://twitter.com/ataulm/status/1196919491646509057) if you have any comments, questions or corrections.
 
 _Thanks [Nick](https://twitter.com/crafty) for the review._
 
