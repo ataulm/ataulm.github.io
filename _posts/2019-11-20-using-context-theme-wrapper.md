@@ -130,7 +130,9 @@ Currently the `materialAlertDialogTheme` hasn’t been made explicitly public, m
  
 ### When would we use this?
 
-Cool! So we’ve seen how we could use a `ContextThemeWrapper` to overlay a theme programmatically. In this example, we could have achieved the same effect in the layout for our custom view:
+Cool! So we've seen we _can_ use a `ContextThemeWrapper` ourselves to overlay a theme programmatically for custom views in our dialog. But there's other ways too.
+
+In this example, we could have achieved the same effect by specifying the `android:theme` attribute in the layout for our custom view:
 
 ```xml
 <LinearLayout
@@ -143,7 +145,26 @@ Cool! So we’ve seen how we could use a `ContextThemeWrapper` to overlay a them
 
 This works on Android 5 and above (or earlier if we’re using an AppCompat or MaterialComponents theme). The layout inflater will read the value of `android:theme` and use a `ContextThemeWrapper` in the same way we’ve done above.
 
-There’s a couple of cases where `ContextThemeWrapper` is exclusively helpful. For example, [with data binding](https://github.com/google/iosched/blob/89df01ebc19d9a46495baac4690c2ebfa74946dc/mobile/src/main/java/com/google/samples/apps/iosched/ui/sessiondetail/SessionDetailFragment.kt#L114-L119), since `android:theme` can’t be used or in the case of `materialThemeOverlay`, being able to add support for theme overlays in default style resources without breaking support for `android:theme`.
+The initial problem was that we were using the wrong context—we ought to use the one closest to the view we’re styling. Instead of using the `ContextThemeWrapper` ourselves, or specifying the theme overlay with `android:theme` in the layout, we could have used the [context from the builder](https://developer.android.com/reference/android/app/AlertDialog.Builder#getContext()): 
+
+```kotlin
+val builder = MaterialAlertDialogBuilder(context)
+val dialogThemeContext = builder.getContext()
+val customView = LayoutInflater.from(dialogThemeContext)
+       .inflate(R.layout.dialog_custom_view, ...)
+ 
+builder.setTitle("Verify your identity")
+       .setMessage("Log in using your fingerprint")
+       // ...
+       .setView(customView)
+       .create()
+```
+
+Thanks [Christophe for this hint](https://twitter.com/BladeCoder/status/1197194843581243392)!
+
+Under the hood, `MaterialAlertDialogBuilder` is using `ContextThemeWrapper` in exactly the same way; it resolves `materialAlertDialogTheme`, using the value as a theme overlay.
+
+There are a couple of cases where `ContextThemeWrapper` is exclusively helpful. For example, [with data binding](https://github.com/google/iosched/blob/89df01ebc19d9a46495baac4690c2ebfa74946dc/mobile/src/main/java/com/google/samples/apps/iosched/ui/sessiondetail/SessionDetailFragment.kt#L114-L119), since `android:theme` can’t be used or in the case of `materialThemeOverlay`, being able to add support for theme overlays in default style resources without breaking support for `android:theme`.
 
 In our next post, we’ll look at how `android:theme` was backported in more detail. As always, [let me know](https://twitter.com/ataulm/status/1196919491646509057) if you have any comments, questions or corrections.
 
