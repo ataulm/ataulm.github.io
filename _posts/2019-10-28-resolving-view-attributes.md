@@ -324,9 +324,9 @@ and then specified the style in our app’s theme:
 </style>
 ```
 
-If the view we’re writing is solely going to be used in our app, it makes sense to start with `defStyleRes` support.
+It makes sense to start with supporting only `defStyleRes` since it’s simpler. If we have multiple themes in our app, and the custom view needs to be styled differently in each, then adding `defStyleAttr` makes sense.
 
-If it’s likely that the view will be packaged for use in a library, we should update it to add support for `defStyleAttr` (in addition) so that clients can set a default style, extending from our default one, and falling back to default one if they don’t want to configure it at all:
+If the view is going to be packaged in a library, then we should do both; we can’t control whether someone else will set the default style in their theme so we should include `defStyleRes` but at the same time, we want to afford them an easy way to change this default style if they need:
 
 ```kotlin
 private const val DEF_STYLE_ATTR = R.attr.spottyFrameLayoutStyle
