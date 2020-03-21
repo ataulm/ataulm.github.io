@@ -19,6 +19,9 @@ Here’s the opening for the new section. We use curly quotes and apostrophes:
 - ” for close (`opt + shift + {`)
 - ’ for apostrophes (`opt + shift + }`)
 
+Here’s an image:
+
+![alt text](/images/article-directory/image.png)
 
 <!-- Code blocks should specify the language for syntax highlighting -->
 ```kotlin
@@ -34,6 +37,6 @@ Here’s another blog: [link to blog]({% post_url 2019-10-28-resolving-view-attr
 If you have any questions, comments or corrections, let me know at the link below!
 
 <center>
-<!-- Use the Embed Tweet function from Twitter to generate a blockquote for the Tweet associated with this post and stick it here between these <center> tags -->
+<!-- Use the Embed Tweet function from Twitter to generate a blockquote for the Tweet associated with this post and stick it here between these <center> tags, and ditch the script tag (we load it in the head)-->
 <blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">I wrote about a nifty API that&#39;s coming up in AppCompat that exposes hidden actions for Views!<a href="https://t.co/gU8kOcctyU">https://t.co/gU8kOcctyU</a> <a href="https://twitter.com/hashtag/androiddev?src=hash&amp;ref_src=twsrc%5Etfw">#androiddev</a> <a href="https://twitter.com/hashtag/a11y?src=hash&amp;ref_src=twsrc%5Etfw">#a11y</a> <a href="https://twitter.com/hashtag/gde?src=hash&amp;ref_src=twsrc%5Etfw">#gde</a> <a href="https://twitter.com/hashtag/io19?src=hash&amp;ref_src=twsrc%5Etfw">#io19</a> <a href="https://twitter.com/hashtag/whatsnext?src=hash&amp;ref_src=twsrc%5Etfw">#whatsnext</a></p>&mdash; ataúl ✏️ (@ataulm) <a href="https://twitter.com/ataulm/status/1126340698867814400?ref_src=twsrc%5Etfw">May 9, 2019</a></blockquote>
 </center>
