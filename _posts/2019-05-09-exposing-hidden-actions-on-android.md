@@ -47,8 +47,4 @@ This is useful when we have actions on a view that aren’t accessible with a si
 
 See the “Single-action elements” section in [“What’s Next? A Practical Introduction to Accessibility on Android”](https://proandroiddev.com/whats-next-a-practical-introduction-to-accessibility-on-android-79c90d27e124) for more ideas on when this might be useful.
 
-If you have any questions, comments or corrections, let me know at the link below!
-
-<center>
-<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">I wrote about a nifty API that&#39;s coming up in AppCompat that exposes hidden actions for Views!<a href="https://t.co/gU8kOcctyU">https://t.co/gU8kOcctyU</a> <a href="https://twitter.com/hashtag/androiddev?src=hash&amp;ref_src=twsrc%5Etfw">#androiddev</a> <a href="https://twitter.com/hashtag/a11y?src=hash&amp;ref_src=twsrc%5Etfw">#a11y</a> <a href="https://twitter.com/hashtag/gde?src=hash&amp;ref_src=twsrc%5Etfw">#gde</a> <a href="https://twitter.com/hashtag/io19?src=hash&amp;ref_src=twsrc%5Etfw">#io19</a> <a href="https://twitter.com/hashtag/whatsnext?src=hash&amp;ref_src=twsrc%5Etfw">#whatsnext</a></p>&mdash; ataúl ✏️ (@ataulm) <a href="https://twitter.com/ataulm/status/1126340698867814400?ref_src=twsrc%5Etfw">May 9, 2019</a></blockquote>
-</center>
+If you have any questions, comments or corrections, [let me know](https://twitter.com/ataulm)!
