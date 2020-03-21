@@ -61,7 +61,7 @@ val invalidIceCream = IceCream(-1)
 
 I’m not a fan—[I would be slightly astonished](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) if I encountered this in a project.
 
-For me, because it looks so much like a constructor invocation, I would expect that these were initializing objects of type IceCream or crashing at runtime because of some validation error inside the constructor.
+For me, because it looks so much like a constructor invocation, I would expect that these were initializing objects of type `IceCream` or crashing at runtime because of some validation error inside the constructor.
 
 Are there any hints that the type of these values is **not** `IceCream`? Yes!
 
@@ -77,7 +77,7 @@ You can use factory classes or even named functions in your companion objects to
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This enforces that all objects are well formed, something you&#39;d have to check regardless before or after calling a *real* constructor. If you prefer to give this validation constructor a name and still hide the real constructor, that&#39;s good too. I&#39;ve not seen that much pushback.</p>&mdash; Paco (@pacoworks) <a href="https://twitter.com/pacoworks/status/1028248385067864066?ref_src=twsrc%5Etfw">August 11, 2018</a></blockquote>
 </center>
 
-I spoke with Paco about these factories returning Option<MyClass> instead of MyClass? or even throwing an exception in case of invalid parameters and he shared:
+I spoke with Paco about these factories returning `Option<MyClass>` instead of `MyClass?` or even throwing an exception in case of invalid parameters and he shared:
 
 >“This conversation on Twitter highlighted one improvement we could have in our codebases. By moving to validated constructors, we can avoid a whole set of runtime errors.
 >
