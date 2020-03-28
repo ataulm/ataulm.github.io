@@ -137,7 +137,7 @@ h6, .h6 {
 }
 
 p, ul, ol {
-	margin-top: 15px;
+	margin-top: 30px;
 	font-size: $p-small;
 	font-weight: $p-weight;
 	line-height: $p-lineheight;
@@ -161,7 +161,11 @@ p, ul, ol {
 }
 
 ul, ol {
-	list-style-position: inside;
+	list-style-position: outside;
+}
+
+li {
+	margin-left: 2em;
 }
 
 blockquote {
@@ -387,7 +391,6 @@ section {
 	position: relative;
 	margin: 0 auto;
 	padding: 0 20px;
-	max-width: 1500px;
 
 	@include mq(tabletp) {
 		padding: 0 80px;
