@@ -13,7 +13,7 @@ From the outside, the look and feel of the Monzo app is pretty simple. We had a 
 
 ![](/images/refactoring-themes-with-style/simple-themes.png)
 
-It actually turned out that we had more than three themes - we had 22, and the theme hierarchy looked as follows. Each square represents a theme, where the arrows show how themes inherit from each other, but when we checked the usages, it wasn’t always clear why a screen used a particular variant over, and some weren’t used at all:
+It actually turned out that we had more than three themes - we had 22, and the theme hierarchy looked as follows. Each square represents a theme, where the arrows show how themes inherit from each other, but when we checked the usages, it wasn’t always clear why a screen used a particular variant over another, and some weren’t used at all:
 
 ![Two trees showing Monzo's themes-one with a MaterialComponents base and the other with a MaterialComponents.Light base](/images/refactoring-themes-with-style/hierarchy.png)
 
