@@ -39,18 +39,6 @@ social_settings:
   bandcamp_url: ''
   linkedin_url: ''
 
-color_settings:
-  background_color: '#ffffff'
-  background_alt_color: '#f4f5f6'
-  text_body_color: '#6C7A89'
-  text_dark_color: '#2A2F36'
-  text_light_color: '#ABB7B7'
-  accent_color: '#ee983d'
-  border_color: '#f7d7b6'
-  overlay_background_color: '#161B21'
-  overlay_text_color: '#ffffff'
-  error_color: '#D64541'
-
 font_settings:
   font_embed: '<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&display=swap" rel="stylesheet">'
   title_font: '"Noto Serif", serif'
