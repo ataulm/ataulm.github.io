@@ -76,13 +76,13 @@
 			height: 12px;
 			border: 0;
 			border-radius: 100%;
-			background: $text-light-color;
+			background: $color-text-light;
 			@include transition(all 0.2s ease-in-out);
 			cursor: pointer;
 			outline: none;
 
 			&.active {
-				background: $accent-color;
+				background: $color-accent;
 			}
 		}
 	}
