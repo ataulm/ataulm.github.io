@@ -6,10 +6,6 @@ basic_settings:
 header_settings:
   avatar_image: /images/avatar.png
   logo_image: 
-  logo_width: 200
-
-grid_settings:
-  grid_spacing: 10
 
 social_settings:
   facebook_url: ''
@@ -41,88 +37,6 @@ social_settings:
 
 font_settings:
   font_embed: '<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&display=swap" rel="stylesheet">'
-  title_font: '"Noto Serif", serif'
-  body_font: '"Open Sans", sans-serif'
-  regular_weight: 400
-  bold_weight: 600
-  site_title:
-    small_size: 27
-    medium_size: 32
-    large_size: 40
-    weight: 600
-    letter_spacing: 0
-  site_tagline:
-    small_size: 16
-    medium_size: 18
-    large_size: 20
-    weight: 400
-    letter_spacing: 0
-    line_height: 1.5
-  menu:
-    small_size: 16
-    medium_size: 18
-    large_size: 20
-    weight: 600
-    letter_spacing: 0
-  h1:
-    small_size: 27
-    medium_size: 38
-    large_size: 50
-    weight: 600
-    letter_spacing: -0.02
-    line_height: 1.2
-  h2:
-    small_size: 27
-    medium_size: 38
-    large_size: 50
-    weight: 600
-    letter_spacing: -0.02
-    line_height: 1.2
-  h3:
-    small_size: 22
-    medium_size: 25
-    large_size: 30
-    weight: 400
-    letter_spacing: -0.02
-    line_height: 1.3
-  h4:
-    small_size: 17
-    medium_size: 22
-    large_size: 22
-    weight: 400
-    letter_spacing: 0
-    line_height: 1.6
-  h5:
-    small_size: 17
-    medium_size: 20
-    large_size: 20
-    weight: 400
-    letter_spacing: 0
-    line_height: 1.6
-  h6:
-    small_size: 17
-    medium_size: 20
-    large_size: 20
-    weight: 400
-    letter_spacing: 0
-    line_height: 1.6
-  p:
-    small_size: 17
-    medium_size: 19
-    large_size: 22
-    weight: 400
-    letter_spacing: 0
-    line_height: 2
-  blockquote:
-    small_size: 25
-    medium_size: 35
-    large_size: 45
-    weight: 300
-    letter_spacing: -0.02
-    line_height: 1.6
-  buttons:
-    weight: 600
-    letter_spacing: 0
 
 advanced_settings:
   ajax_loading: false # Google Analytics is fudging up with ajax
