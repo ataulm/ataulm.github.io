@@ -20,8 +20,9 @@ $color-border: #f7d7b6;
 
 $color-text-dark: #2A2F36;
 $color-text-light: #ABB7B7;
-$color-text-headline: #2A2F36;
+$color-text-headline: $color-text-dark;
 $color-text-body: #6C7A89;
+$color-text-link: $color-text-dark;
 
 $color-accent: #ee983d;
 $color-error: #d64541;

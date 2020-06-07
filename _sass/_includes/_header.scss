@@ -56,7 +56,7 @@
 	font-weight: $sitetitle-weight;
 	letter-spacing: $sitetitle-spacing;
 	line-height: 1;
-	color: $color-text-dark;
+	color: $color-text-headline;
 
 	&:hover {
 		color: $color-accent;
@@ -123,7 +123,7 @@
 .menu__list__item__link {
 	font-size: $menu-small;
 	font-weight: $menu-weight;
-	color: $color-text-dark;
+	color: $color-text-link;
 	border-bottom: 2px solid transparent;
 
 	&:hover {
