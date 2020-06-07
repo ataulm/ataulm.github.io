@@ -30,8 +30,9 @@ $color-error: #d64541;
 
 // Fonts
 
-$body-font: "Open Sans", sans-serif;
-$title-font: "Noto Serif", serif;
+// _data/settings.yml has `font_settings.font_embed`
+$body-font: 'Fira Sans', sans-serif;
+$title-font: 'Fira Sans', sans-serif;
 
 $regular-weight: 400;
 $bold-weight: 600;
