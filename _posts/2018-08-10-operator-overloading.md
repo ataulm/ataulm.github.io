@@ -11,7 +11,7 @@ We can either implement these behaviours in a class as a member function (handy 
 
 First, let’s see what overloading _is_.
 
-###  What is overloading?
+##  What is overloading?
 
 Overloading functions is a practice which allow us to provide multiple functions with the same name (in the same scope), but with different signatures. This is desirable when the behaviour is the same or similar but the implementation has to be different for different types.
 
@@ -43,7 +43,7 @@ class Summer {
 
 Now we can say that we’ve overloaded the “sum” function; whenever we call sum the function that it calls will depend on the types of the parameters we pass.
 
-### What is operator overloading in Kotlin?
+## What is operator overloading in Kotlin?
 
 Operator overloading is similar. Operators like minus, plus or equals have been defined to work with a subset of predefined types.
 
@@ -76,7 +76,7 @@ operator fun minus(other: Double): Double
 
 Let’s add another for a type that we define.
 
-### Overloading an operator for a new type
+## Overloading an operator for a new type
 
 We have a data class that represents a tub (box?) of ice cream. It has one value, which is the number of scoops remaining in the tub (usually a low number for me):
 
@@ -124,7 +124,7 @@ operator fun Int.minus(iceCreamTub: IceCreamTub)...
 
 Oh. I actually don’t know what the return type should be for this function. It’s nonsense!
 
-### When should we (not) overload operators?
+## When should we (not) overload operators?
 
 >Problems, and critics, to the use of operator overloading arise because it allows programmers to give operators completely free functionality, without an imposition of coherency that permits to consistently satisfy user/reader expectations
 
@@ -146,7 +146,7 @@ We should be careful about overloading operators with types that might cause bew
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">It is my opinion that this does not mean operator overloading is bad, but just that this was probably a poor choice to use it.</p>&mdash; Princess Nicole (@LadyNikoleta) <a href="https://twitter.com/LadyNikoleta/status/1017463346197434369?ref_src=twsrc%5Etfw">July 12, 2018</a></blockquote>
 </center>
 
-### Useful instances of overloading
+## Useful instances of overloading
 
 If you’ve used the Kotlin for even a few weeks, you’ll likely have come across instances of operator overloading already.
 
@@ -181,7 +181,7 @@ println(mix) // prints [1, 2, 3, four, five, six]
 
 Have a look at the [full list of operators that can be overloaded on the Kotlin Language documentation site](https://kotlinlang.org/docs/reference/operator-overloading.html).
 
-### The invoke() operator
+## The invoke() operator
 
 The `invoke()` operator allows instances of your classes to be called as functions.
 
@@ -255,7 +255,7 @@ class ScoopAction {
 
 Parentheses are translated to calls to `invoke` with appropriate arguments.
 
-### Have I been using the invoke() operator already?
+## Have I been using the invoke() operator already?
 
 The most common place we encounter the `invoke()` operator is with lambdas!
 
@@ -291,7 +291,7 @@ Instead of:
 println(square.invoke(5)) // also prints 25
 ```
 
-### So… should I use this in my project?
+## So… should I use this in my project?
 
 We looked at what operator overloading is and how to do it in Kotlin. We see that the operators serve as a shorthand for function calls, and consequently anything written with an operator can be written explicitly with the corresponding function.
 

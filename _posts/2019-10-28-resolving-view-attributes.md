@@ -15,7 +15,7 @@ Maintaining a consistent design language in our apps is easier if we rely on app
 
 Then we’ll make a view with some custom attributes and see how these attributes are resolved. This should help us understand the effect of specifying view attributes in different places, and hopefully make Android theming somewhat less of a dark art.
 
-### AttributeSet
+## AttributeSet
 
 The `AttributeSet` is a collection of all the specified attributes on a view defined in XML. It’s the second parameter of the two-argument `View` constructor:
 
@@ -50,7 +50,7 @@ This isn’t limited to attributes that are defined explicitly in a `declare-sty
 
 `undeclaredAttr` will be included in the attribute set too but since the `TextView` class doesn’t know about it, it’ll just be ignored.
 
-### The style attribute
+## The style attribute
 
 We can set the `style` attribute on a view in XML. It points to a style resource:
 
@@ -77,7 +77,7 @@ The `style` attribute will be included in the attribute set, so in this example,
 
 Although `android:textColor` is in the style resource, it won’t be present in the attribute set that’s passed to the view’s constructor; it’ll be read at a different stage.
 
-### Default style resource
+## Default style resource
 
 A view can have a _default_ style, specified by either the `defStyleAttr` or `defStyleRes`, saving us the trouble of styling each usage. These are the three- and four-argument View constructors and used by the view itself (or a subclass).
 
@@ -114,7 +114,7 @@ In our theme, if we’re specifying a default style resource with the `defStyleA
 
 This lets us override attributes explicitly while retaining the default style for the ones we don’t care about.
 
-### Theme attributes
+## Theme attributes
 
 The last place we can set a view attribute is in the theme itself.
 
@@ -135,7 +135,7 @@ The default text for every view (that supports it) will be "you forgot to set me
 
 ![Button with text you forgot to set me](/images/resolving-view-attrs/material-button-forgot-text.png)
 
-### Defining SpottyFrameLayout
+## Defining SpottyFrameLayout
 
 Let’s create a custom view for our app: a `SpottyFrameLayout` which draws colored spots over its children.
 
@@ -234,7 +234,7 @@ What if `android:textColor` was specified everywhere? On the view, in the style 
 
 Let’s use this information to provide some default styling for `SpottyFrameLayout`.
 
-### Styling SpottyFrameLayout for our app
+## Styling SpottyFrameLayout for our app
 
 We started with `app:spotColor` and `app:spotSize` defined in the layout:
 
@@ -339,7 +339,7 @@ class SpottyFrameLayout(context: Context, attrs: AttributeSet)
         ...
 ```
 
-### What’s next?
+## What’s next?
 
 There’s two important takeaways from this post:
 

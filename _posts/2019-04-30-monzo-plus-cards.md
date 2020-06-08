@@ -28,7 +28,7 @@ All three parts were encapsulated in a class called `ShufflingCardsView` which b
 
 While we were working on the sign up flow, we just used `ImageView.setImageResource(...)` to unceremoniously switch between the selected card. The simple API meant that when we had time, we were able to implement the animations without touching any other part of the codebase.
 
-### Fan out and reveal
+## Fan out and reveal
 
 The design consideration behind the fan out animation was to “reveal” the new colours as a surprise. Kind of like how a magician would ask someone to pick a card for a trick — it’s _magical_.
 
@@ -58,7 +58,7 @@ blueCardView.animate()
         .start()
 ```
 
-### Collating the cards
+## Collating the cards
 
 When the user selects a card initially, we want to collate the cards again, but not in a neat stack.
 
@@ -70,7 +70,7 @@ Instead, we represented each card as a `FrameLayout` with a child `ImageView`. F
 
 For this, we had to turn off child clipping in the `ShufflingCardsView` so that each card’s outer `FrameLayout` would be able to draw its child `ImageView` beyond its bounds.
 
-### Card select animation
+## Card select animation
 
 The last part was the card select animation. An early version was more fancy—depending on which card you selecting, either the front card would be shuffled to the back, or the back card would be shuffled to the front.
 
@@ -89,7 +89,7 @@ At the peak of the animation, we need to update the z-index of all the cards, so
 
 We used `withEndAction` to chain animations for this — it’s such a short animation (and quick too) that there’s no need to be really exact with the synchronizations.
 
-### What’s next?
+## What’s next?
 
 I’d like to add a little wiggle if the user re-selects the currently selected card. I think also it could be a bit more flexible with sizes (e.g. using ConstraintLayout and aspect ratio) rather than the hardcoded dps.
 

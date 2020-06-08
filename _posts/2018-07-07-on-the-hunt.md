@@ -13,7 +13,7 @@ I haven’t interviewed for almost five years, when I left university. Since the
 
 This is a post about my various interviewing experiences and what I learned from them.
 
-### Finding opportunities
+## Finding opportunities
 
 I interact with a lot of folks who are active in the community (mostly via Twitter and community Slacks). I trust their judgement and appreciate their advice.
 
@@ -29,7 +29,7 @@ They should encourage (and enable) their teams to **attend and speak at meet-ups
 
 **Provide time for and praise employees that share** their experiences and knowledge with others through talks, podcasts or blog posts.
 
-### Chatting to a recruiter
+## Chatting to a recruiter
 
 After applying, you’ll get to speak to an in-house recruiter! In my experience, this was a phone call where they introduced themselves and then explained how their recruitment process worked.
 
@@ -51,7 +51,7 @@ In one case, the company interpreted my decision not to accept the offer on the 
 
 Overall, I’m glad I didn’t rush it. I took my friend’s advice (“Go on your gut feeling”) and they were right — I’m really excited about the role I landed (star-eyes-emoji)!
 
-### Take-home assignments
+## Take-home assignments
 
 Take-home assignments are a bit controversial. I’ve heard from friends who’ve spent weeks on them or who were asked to complete some pretty ridiculous projects (in terms of scope or complexity).
 
@@ -94,7 +94,7 @@ I got a phone call asking me to spend an extra hour on the project to demonstrat
 
 In both cases, **the reviews felt judgement-free and curious in nature**. I’m not sure if this would be the case in all places, but the two companies in question have a reputation for hiring friendly and professional people.
 
-### Whiteboard coding
+## Whiteboard coding
 
 There was one interview where I was told to prepare for some whiteboard-style coding. I bought [Gayle Laakmann McDowell’s Cracking the Coding Interview](https://www.amazon.co.uk/Cracking-Coding-Interview-6th-Programming/dp/0984782850/ref=sr_1_1?ie=UTF8&qid=1531081888&sr=8-1&keywords=cracking+the+coding+interview) book, and worked through exercises from each chapter.
 
@@ -116,7 +116,7 @@ The best part of this interview was the lead-up. Everyone was supportive. I did 
 
 **That was my take-away from this experience — much love.**
 
-### Talking... a lot
+## Talking... a lot
 
 The other stages were all pretty much chats — either on Google Hangouts or on-site.
 
@@ -135,7 +135,7 @@ Talking about negative aspects was really important to me. It works better with 
 
 More often than not, I found I could relate with what they shared, and this was reassuring for both me and the interviewer.
 
-### In closing
+## In closing
 
 No matter how the interviews go, the recruiter is going to be in touch to conclude.
 

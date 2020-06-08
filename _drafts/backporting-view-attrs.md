@@ -8,7 +8,7 @@ When the latest release of Android introduces a new view attribute, how can we u
 
 Let's try to add some new view attributes of our own and we'll look at how `android:theme` was backported, as well as how (and why) `materialThemeOverlay` is implemented differently.
 
-### Implementing mixins on Android
+## Implementing mixins on Android
 
 Styles on Android can extend from a parent style, overriding or specifying additional attributes. It’s a single inheritance model where a style can’t have two parents.
 
@@ -49,7 +49,7 @@ to yield a nice text view with large, blue text:
 
 TK image
 
-### Theme overlays
+## Theme overlays
 
 This should be possible by layering theme overlays. We read in the [last post how view attributes are resolved]({% post_url 2019-10-28-resolving-view-attributes %}), where the theme is the last place the view will look for an attribute. If there are multiple layers of themes (application, activity or view), then it'll search for a particular attribute on the 
 
@@ -57,11 +57,11 @@ connect 4 analogy
 
 
 
-### Writing a custom layout inflater
+## Writing a custom layout inflater
 
 
 
-### Conclusion
+## Conclusion
 
 - layout inflater can't be used to backport new view attributes
 - 
@@ -85,7 +85,7 @@ What we'd really like is to be able to include attributes from multiple styles.
 
 Some other frameworks _do_ allow this, like [mixins in Sass](https://sass-lang.com/documentation/at-rules/mixin). The question is, how can we do this on Android?
 
-### materialThemeOverlay using Context Theme Wrapper
+## materialThemeOverlay using Context Theme Wrapper
 
 Let's first recap what we know about `android:theme` and `materialThemeOverlay`.
 
@@ -112,7 +112,7 @@ This function takes `defStyleAttr` and `defStyleRes` as parameters, so it's able
 
 One final consideration the function makes is to reapply the `android:theme` overlay after it's applied the `materialThemeOverlay` ones so that attributes defined in `android:theme` override ones in `materialThemeOverlay`.
 
-### Mixins with multiple theme overlays
+## Mixins with multiple theme overlays
 
 We can go deeper. If `materialThemeOverlay` affords an additional theme overlay, then we could just as easily layer our own theme overlays to support a mixins-ish behavior.
 
@@ -158,7 +158,7 @@ There's two ways to do this. If we're not fussed about supporting default style 
 </declare-styleable>
 ```
 
-### Extending the layout inflater
+## Extending the layout inflater
 
 We want to override the 8-param `createView()` from `AppCompatViewInflater`:
 
@@ -253,6 +253,6 @@ private fun Context.wrapThemeIfNecessary(@StyleRes themeRes: Int) =
 
 
 
-### Is this useful?
+## Is this useful?
 
 There isn't much value in fighting against the system to support mixins like this but it was fun to try. In addition, this approach has the same limitation as `materialThemeOverlay` in that it'll require explicit support in your views to work in default style resources.

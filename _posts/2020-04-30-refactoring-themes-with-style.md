@@ -7,7 +7,7 @@ Last year, [Nick Butcher](https://twitter.com/crafty) and [Chris Banes](https://
 
 We’ve been working to apply these best practices to the Android app at [Monzo](https://monzo.com). For us, the challenge lay more in how we could make these changes safely, over time. In other words, how we can refactor our themes.
 
-### An ideal theme structure
+## An ideal theme structure
 
 From the outside, the look and feel of the Monzo app is pretty simple. We had a dark theme, a light theme, as well as a light theme with a dark toolbar.
 
@@ -34,7 +34,7 @@ There's a single tree, with four layers:
 
 Each one has a specific purpose, and understanding these helps us keep our themes tidy and maintainable.
 
-#### App theme
+### App theme
 
 At the very bottom are the app themes, which we apply at the activity level:
 
@@ -67,7 +67,7 @@ The app theme will mostly contain values for colour attributes, like `colorPrima
 
 When all views and layouts only reference colour attributes from our themes, then adding ["night-mode"](https://material.io/develop/android/theming/dark/) to the app becomes trivial: we can override these app themes in the values-night resource directory, with a different set of colour values.
 
-#### Base theme
+### Base theme
 
 Our base theme, `Base.Theme.Monzo`, is where we override or define default styles for views and text appearance attributes.
 This layer generally doesn’t contain references to specific colours. Instead, the style resources used here will references attributes from the app themes.
@@ -84,7 +84,7 @@ This layer generally doesn’t contain references to specific colours. Instead, 
 
 Avoiding the use of hardcoded colours in this layer means that everything common to _all_ themes can go here.
 
-#### Platform theme
+### Platform theme
 
 The platform theme layer allows us to account for API specific attributes. Using [resource qualifiers](https://developer.android.com/guide/topics/resources/providing-resources#AlternativeResources), we can specify a different platform theme for different versions of Android.
 
@@ -125,7 +125,7 @@ This works based on the following principles:
 - Each instance of `Platform.Theme.Monzo` depends on a version-specific theme resource, e.g. `Platform.V23.Theme.Monzo`
 - Version-specific theme resources inherit from older version-specific resources, unless it’s the minSdkVersion in which case it’ll depend on the framework theme
 
-#### Framework theme
+### Framework theme
 
 We chose `Theme.MaterialComponents.Light.NoActionBar` as the framework theme to inherit from. The framework theme provides lots of sensible defaults so that we don’t have to specify everything.
 
@@ -133,7 +133,7 @@ We chose `Theme.MaterialComponents.Light.NoActionBar` as the framework theme to 
 
 So that’s the structure we’re looking to get to, but what steps can we take to help us there?
 
-### Renaming and pruning trees
+## Renaming and pruning trees
 
 With so many themes and styles, it was difficult to know where to start. Part of this difficulty lay in the fact that it wasn’t clear how themes were used because it wasn’t always clear which style resources were themes. We decided to adopt a strict naming convention to help us navigate the current state of the app.
 
@@ -162,7 +162,7 @@ De-tangling what was left of the 22 themes was made easier by adopting naming pr
 
 Themes, theme overlays and styles are distinct concepts on Android, but they’re all represented as style resources; being stricter with names means that the resources will have less chance of being misused. For more information on the difference between themes and styles, check out ["Android Styling: Themes vs Styles"](https://medium.com/androiddevelopers/android-styling-themes-vs-styles-ebe05f917578).
 
-### Migrating to a single base theme
+## Migrating to a single base theme
 
 Although renaming resources and collapsing very similar themes helps reduce our hierarchy into a manageable number of understandable themes, we still need to collapse our multi-tree setup into one.
 
@@ -181,7 +181,7 @@ Re-parenting a theme can introduce unexpected bugs. In this case, we had to be c
 
 For the Monzo app, we often used light themed components in both themes (e.g. dialogs and pop-up menus), which meant that these attributes were overridden to force light styles anyway. This meant there were no major regressions.
 
-### Adding the platform layer
+## Adding the platform layer
 
 Now we’ve got a single tree, it’s possible for us to add the platform layer. This helps us handle a few specific attributes:
 
@@ -192,7 +192,7 @@ which are available on API 23 and 27 respectively. They both inform the system w
 
 These attributes aren’t set in isolation: they relate to `android:statusBarColor` and `android:navigationBarColor`. Even though these are available from older API versions, we don’t want to set them separately from the ones above. Instead, we create custom theme attributes as an abstraction.
 
-#### Creating guarded aliases
+### Creating guarded aliases
 
 Creating a custom theme attribute is a case of declaring it as an attribute resource in a values resource file with a name and format:
 
@@ -241,7 +241,7 @@ By itself, this won’t do anything except assign values for these attributes. W
 
 Now, both status bar attributes will be set together only on v23 and above, and they’re configurable from each app theme.
 
-### What’s next?
+## What’s next?
 
 From here, we’ll look at default styles and how they help us de-duplicate code, improve consistency, and strengthen our themes.
 

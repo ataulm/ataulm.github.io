@@ -13,7 +13,7 @@ One of the concepts that was new to me was theme overlays. It’s a powerful tec
 
 The typical way to apply a theme overlay is using the `android:theme` attribute on our view. This post summarises how we can do this, as well as introducing `materialThemeOverlay`, a theme attribute that (kind of) lets us set a theme overlay on a default style.
 
-### Using Theme Overlays
+## Using Theme Overlays
 
 In `AndroidManifest.xml`, we’ll set the app theme by specifying the theme attribute on the application element, `android:theme="@style/Theme.Demo"`. Our theme defines the `colorPrimary` theme attribute:
 
@@ -78,7 +78,7 @@ The `LayoutInflater` class will read `android:theme` and use a `ContextThemeWrap
 
 It’s like an onion with many layers; if a theme attribute is requested, it’ll start from the outside and peel away layers until it finds the target. This is why it’s important to inflate our views with the correct `Context`—the one closest to the view we’re inflating—otherwise, we might accidentally skip a theme override.
 
-### Default styles and theme overlays
+## Default styles and theme overlays
 
 When we write views, we can specify a default style resource (`defStyleRes: Int`) which means we don’t have to specify it every time it’s used.
 
@@ -149,7 +149,7 @@ We can’t use `android:theme` in a style resource because nothing is looking fo
 
 ![](/images/material-theme-overlay/big-gray-button.png)
 
-### Hey, this doesn’t work in my custom Views!
+## Hey, this doesn’t work in my custom Views!
 
 This attribute requires explicit support in your custom view because it’s a custom attribute that needs to be handled explicitly.
 
@@ -157,7 +157,7 @@ This attribute requires explicit support in your custom view because it’s a cu
 
 This function will check for the presence of `materialThemeOverlay`, then if it’s present and the theme specified is different from the existing one, it’ll wrap the context with `ContextThemeWrapper`, similar to the way `LayoutInflater` does.
 
-### So... what can I do?
+## So... what can I do?
 
 The easiest thing is to copy the function into our project, and use it in the same way, e.g.:
 
