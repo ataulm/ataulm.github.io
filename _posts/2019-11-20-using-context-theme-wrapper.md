@@ -6,7 +6,7 @@ excerpt: A ContextThemeWrapper allows us to modify or overlay the theme of anoth
  
 A `ContextThemeWrapper` allows us to modify or overlay the theme of another context. Let’s have a look at how we’d do this, using an alert dialog as an example.
  
-### Alert dialogs in a Material world
+## Alert dialogs in a Material world
  
 [Material Components for Android](https://github.com/material-components/material-components-android) doesn’t include an alert dialog implementation. Instead, `MaterialAlertDialogBuilder` is used to apply Material theming (color, typography and shape) to the AppCompat implementation.
  
@@ -22,7 +22,7 @@ The builder will use the theme of the context given to the builder to theme the 
 
 ![dialog where button text is red](/images/using-context-theme-wrapper/01.png)
  
-### Custom views in an alert dialog
+## Custom views in an alert dialog
  
 The builder lets us provide a custom view as a component in the dialog.
  
@@ -63,7 +63,7 @@ Since we referenced a theme attribute for the icon tint (`colorPrimary`), this a
  
 ![dialog where icon and button text are red](/images/using-context-theme-wrapper/02.png)
  
-### Changing the primary color
+## Changing the primary color
  
 Let’s change the primary color for alert dialogs to use blue instead of red, being careful not to affect the rest of our app. We can achieve this using theme overlays in two ways.
  
@@ -95,7 +95,7 @@ Whichever approach we take, this is what we end up with:
  
 Wait, why is our icon still red?
  
-### Using the correct context
+## Using the correct context
  
 Our custom view is still being inflated with a context that has `colorPrimary` set to red. This is where we could use a `ContextThemeWrapper`.
  
@@ -108,7 +108,7 @@ Now, our custom view will be inflated with a context where `colorPrimary` resolv
 
 ![dialog where icon and button text are blue](/images/using-context-theme-wrapper/04.png)
  
-#### Aside: using the theme attribute
+### Aside: using the theme attribute
  
 Using the theme resource ID directly works, but then we need to keep this in sync with the theme used by the dialog. We could instead query the value of `materialAlertDialogTheme` from our theme:
  
@@ -128,7 +128,7 @@ This means that whenever the value for `materialAlertDialogTheme` changes, the l
  
 Currently the `materialAlertDialogTheme` hasn’t been made explicitly public, meaning that Lint will flag usages in code. I’ve opened [an issue for this here](https://github.com/material-components/material-components-android/issues/769).
  
-### When would we use this?
+## When would we use this?
 
 Cool! So we've seen we _can_ use a `ContextThemeWrapper` ourselves to overlay a theme programmatically for custom views in our dialog. But there's other ways too.
 

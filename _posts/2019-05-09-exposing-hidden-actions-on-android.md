@@ -9,7 +9,7 @@ Exposing “hidden” actions to accessibility services used to require providin
 
 No longer! There’s a new API dropping in the latest version of AppCompat (1.1.0) which includes a handy way to serve this information to the system with minimum effort.
 
-### What is it?
+## What is it?
 
 The function adds additional information to a view which can be read by Android accessibility services. It associates a view with an “action”, where an action consists of a label and executable block of code.
 
@@ -17,7 +17,7 @@ Accessibility services, like TalkBack, can present these actions to users in a w
 
 ![](/images/exposing-hidden-actions-on-android/custom-action-click.gif)
 
-### How do I use it?
+## How do I use it?
 
 Use `ViewCompat` to set an action on a view, passing the label for the action, and the action to perform:
 
@@ -41,7 +41,7 @@ And that’s it! The `itemView` now has two actions, “watch” and “download
 
 It works using an `AccessibilityDelegate` under the hood to add actions to `AccessibilityNodeInfo`. It uses view tags which allows it to add actions over multiple calls without passing them all at once, but we’re limited to 32 actions per view, which is more than enough for a single view.
 
-### When should I use this?
+## When should I use this?
 
 This is useful when we have actions on a view that aren’t accessible with a simple click—e.g. a swipe-to-delete gesture.
 

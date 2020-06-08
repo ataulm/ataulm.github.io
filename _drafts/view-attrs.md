@@ -6,7 +6,7 @@ excerpt: Themes are maps of "theme attributes" to resources, while styles are ma
 
 We read about the difference between [themes and styles in this post](https://medium.com/androiddevelopers/android-styling-themes-vs-styles-ebe05f917578) by Nick Butcher and Chris Banes. Themes are maps of "theme attributes" to resources, while styles are maps of "view attributes" to resources. In this post, we'll look at the difference between theme attributes and view attributes.
 
-### What's an attribute?
+## What's an attribute?
 
 An attribute is a _named descriptor_ for a value we want to set in XML.
 
@@ -65,7 +65,7 @@ or use the `?attr` syntax in XML, to have it resolved for us:
 
 `@attr/myAppTextColor` is a theme attribute.
 
-### Declaring attributes for a view
+## Declaring attributes for a view
 
 We learned in [_Resolving view attributes on Android_]({% post_url 2019-10-28-resolving-view-attributes %}) that the correct way to define a custom attribute for a view includes declaring it as part of a set of attributes that the view will use (a "styleable"):
 
@@ -91,7 +91,7 @@ We learned in [_Resolving view attributes on Android_]({% post_url 2019-10-28-re
 
 `@attr/spotColor` and `@attr/spotSize` are view attributes.
 
-### So what's the difference?
+## So what's the difference?
 
 A view attribute is an attribute that describes the desired value for a _particular view property_. We can recognise them because they're the attributes which are included in a styleable declaration.
 

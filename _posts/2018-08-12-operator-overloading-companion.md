@@ -21,7 +21,7 @@ from the [Kotlin Language documentation page on Object Expressions and Declarati
 
 An initialized companion object is still an instance of a class (of type `MyClass.Companion`) with which you can overload operators.
 
-### Overloading invoke() in a companion object
+## Overloading invoke() in a companion object
 
 Let’s see this in action. I haven’t included any third-party libraries, so while the tweet above refers to an `Option<User>` I’ll just be using Kotlin’s optional type:
 
@@ -57,7 +57,7 @@ val moreIceCream = IceCream(2)
 val invalidIceCream = IceCream(-1)
 ```
 
-### Should I overload the invoke() operator in a companion object?
+## Should I overload the invoke() operator in a companion object?
 
 I’m not a fan—[I would be slightly astonished](https://en.wikipedia.org/wiki/Principle_of_least_astonishment) if I encountered this in a project.
 
@@ -69,7 +69,7 @@ Are there any hints that the type of these values is **not** `IceCream`? Yes!
 - when you try to use it and get a type error, you’ll realise it’s not `IceCream`
 - If you **hold cmd/ctrl and hover over the `()`** with your mouse, you’ll see it’s clickable and will take you to the declaration of the `invoke()` operator
 
-### So what alternatives are there?
+## So what alternatives are there?
 
 You can use factory classes or even named functions in your companion objects to be more explicit.
 

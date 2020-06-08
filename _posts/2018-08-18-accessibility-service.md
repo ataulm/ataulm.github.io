@@ -19,7 +19,7 @@ We **don’t need to create an accessibility service to make our apps accessible
 
 But when _do_ we need one and are they difficult to write?
 
-### Identify a problem
+## Identify a problem
 
 I watch Netflix on my Android TV with the remote app on my phone because the hardware remote stopped working.
 
@@ -31,7 +31,7 @@ On the hardware remote, this would only be one click. But on the software remote
 
 I wish I could just get it to auto-click for me.
 
-### Building blocks
+## Building blocks
 
 Enter Android’s accessibility services! These tiny heroes can do the job because they’re able to **observe changes to the screen content and take action on the user’s behalf**.
 
@@ -43,7 +43,7 @@ There are three things we need to do in order to get a running accessibility ser
 
 We’ll do this with [Skipper](https://github.com/ataulm/skipper), an accessibility service that you can rely on to navigate you through the treacherous waters of uh… watching Netflix and YouTube.
 
-### Skipper
+## Skipper
 
 With Skipper, you’ll be able to sit back and relax as Netflix throws up the “Are you still watching?” prompt.
 
@@ -57,7 +57,7 @@ We’ll not go through how these work because it’s too specific to this app 
 
 Instead, let’s start with the service itself.
 
-### SkipperAccessibilityService.kt
+## SkipperAccessibilityService.kt
 
 There’s two methods we need to override from AccessibilityService:
 
@@ -166,7 +166,7 @@ class SkipperAccessibilityService : AccessibilityService() {
 
 But where do these `AccessibilityEvent` objects come from? And can we filter them so we only get a subset? (Yes.)
 
-### Accessibility Service Properties
+## Accessibility Service Properties
 
 [Accessibility services can be configured](https://developer.android.com/guide/topics/ui/accessibility/services#service-config) programmatically by creating and setting the `AccessibilityServiceInfo`, but we’ll do it with an XML file (`res/xml/skipper_config.xml`) since we can’t set all properties at runtime.
 
@@ -195,7 +195,7 @@ We want to be informed whenever the content in the window changes — like, 
 
 `android:accessibilityFeedbackType` lets us specify what kind of output we provide to the user. Since there’s no “feedbackNone” (Skipper doesn’t provide feedback), we’ll use the generic one.
 
-### Registering the service
+## Registering the service
 
 All services must be registered and accessibility services are no exception.
 
@@ -227,7 +227,7 @@ Unfortunately, it seems the Android TV version (a different APK) doesn’t use t
 
 (This also means that TalkBack and Switch Access won’t function on Netflix’s Android TV app.)
 
-### OK, what’s next?
+## OK, what’s next?
 
 There’s more work to do with accessibility services and more questions to answer:
 

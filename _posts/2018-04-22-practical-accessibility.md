@@ -44,7 +44,7 @@ There were also questions from the business side:
 - “Budget is the main constraint… special provisions are often out of scope as time does not permit them”
 - “Ideas on how to push companies to make it happen & understand how important it is”
 
-### Getting started
+## Getting started
 
 ![](/images/practical-accessibility/chalkboard.png)
 
@@ -55,7 +55,7 @@ Let’s re-frame the context of what it means to make an app accessible. There a
 
 Our job, as developers and designers, is to facilitate these two things for as many users as possible — and that’s all accessibility is.
 
-### A real-world example
+## A real-world example
 
 Let’s use YouTube as a non-trivial case study. It works because it includes a lot of the widgets and design-patterns we encounter day-to-day, as well as other components (like video) that we might not have experience using in our apps.
 
@@ -67,7 +67,7 @@ A lot of the following content might seem simple in theory, but that’s good. T
 
 We’ll cover two topics in this article, but for me, addressing these issues will make the biggest difference for your users.
 
-### Text
+## Text
 
 There’s only one thing that text needs to be — readable. This section will focus on how to prioritize the readability of your text, i.e. make it accessible to your users.
 
@@ -158,7 +158,7 @@ Playing video | with video overlay
 
 YouTube uses a darkened background when displaying controls on top of a video. This means that the white text is always readable and white icons are always distinguishable, regardless of the video color.
 
-### Accessibility Services
+## Accessibility Services
 
 A structured guide to accessibility on Android would be incomplete without mentioning accessibility services!
 
@@ -170,7 +170,7 @@ As app developers, we don’t need to do much to make our apps compliant with ac
 
 However, by putting a little effort in, we can improve the usability of our apps for users of these services.
 
-#### Google TalkBack
+### Google TalkBack
 
 ![](/images/practical-accessibility/talkback.png)
 
@@ -192,7 +192,7 @@ This can be useful on screens with long lists — by default, using the “n
 
 Instead, with the Touch-to-Explore setting, the user can jump to the bottom navigation or the app bar without having to go through every list item.
 
-#### Content descriptions
+### Content descriptions
 
 When I was collecting feedback, someone asked “what makes a good content description?” Since TalkBack is a spoken feedback accessibility service, it reads the content descriptions of views to let the user know what’s on screen.
 
@@ -253,7 +253,7 @@ itemView.setUsageHint("play video")
 
 That’s pretty much it if you want a base level of support for TalkBack: explicitly-set content descriptions and usage hints. But let’s raise the bar.
 
-#### Single-action elements
+### Single-action elements
 
 Linear navigation means going through a feed can be tedious, since TalkBack will focus on all the inline actions as well as the item itself.
 
@@ -310,7 +310,7 @@ A similar technique can be used for sliding tab strips or bottom navigation, all
 
 _There’s an updated way to do this. See [“Exposing hidden actions on Android”]({% post_url 2019-05-09-exposing-hidden-actions-on-android%})._
 
-#### Add custom actions
+### Add custom actions
 
 If an accessibility service is enabled, YouTube doesn’t auto-dismiss the media controls on a video after a few seconds. Instead, it keeps them displayed indefinitely and adds an explicit dismiss button to the overlay.
 

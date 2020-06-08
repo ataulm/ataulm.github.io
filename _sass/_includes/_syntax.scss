@@ -1,4 +1,8 @@
-.highlight  { background: #212121; color: #fff; border-radius: 8px; }
+.highlight  {
+  background: $code-block-background-color;
+  color: $code-block-default-text-color;
+  border-radius: 8px;
+}
 .highlight .hll { background-color: #49483e }
 .highlight .c { color: #75715e } /* Comment */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */

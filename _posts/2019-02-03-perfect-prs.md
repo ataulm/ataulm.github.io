@@ -13,7 +13,7 @@ It’s a lot of overhead to do this for every UI-affecting code change—_unless
 
 Then, it’s an extra minute spent on each PR for _you_, but at the benefit of saving your reviewers’ time which is way more valuable.
 
-### Red-green-refactor
+## Red-green-refactor
 
 If you’re waiting until you open your PR to take a before and after screenshot, you’ll get frustrated because you’ll have to build your head branch again.
 
@@ -25,7 +25,7 @@ We waste no time with unnecessary builds and it helps you focus on the change yo
 
 As with TDD, the refactor step is often forgotten. We’ll uphold that tradition and forget about it here too.
 
-### Saving screenshots and making screen recordings
+## Saving screenshots and making screen recordings
 
 The Logcat tab in Android Studio lets you take screenshots (camera icon) and record video (play icon) for the selected device:
 
@@ -37,7 +37,7 @@ For screen recordings, I keep “Show taps” enabled on my device (you can find
 
 I use default settings for screen recordings too, and I make sure that I pause at the start and end of the video for a few seconds so that there’s time for people’s eyes to settle before the action begins. Since GIFs will loop, it’s also nice if you end the recording on the same screen or position as you started it.
 
-### Converting screen recordings to GIF
+## Converting screen recordings to GIF
 
 [Sebastiano Poggi wrote a nifty script](https://github.com/rock3r/giffify) that uses ffmpeg to convert videos to GIFs — unfortunately, GitHub doesn’t allow uploading video files even though they can sometimes be smaller.
 
@@ -58,7 +58,7 @@ and it’ll save `before.gif` in the same place as the source file.
 
 Setting a desired height of 640 pixels means it’s usually small enough for GitHub’s size limits, and also small enough not to overshadow other parts of the description.
 
-### Prettier screenshots
+## Prettier screenshots
 
 If you need it to look fancy, e.g. for a slide deck for clients or a presentation, you can use this script (thanks [Lara Martín](https://medium.com/u/42754ec47023) and [Emma Guy](https://medium.com/u/64263b17ad9d)!) to clean up the status bar.
 
@@ -98,7 +98,7 @@ fi
 
 Using the aliases you can enable and disable demo mode on your device with `demoOn` or `demoOff`.
 
-### Markdown tables
+## Markdown tables
 
 Side-by-side comparisons are really useful for screenshots or very short GIFs.
 

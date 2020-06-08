@@ -17,9 +17,23 @@ body {
 	font-weight: $regular-weight;
 	font-style: normal;
 	line-height: 1;
-	color: $text-medium-color;
+	color: $body-text-color;
 }
 
+// code blocks, see `_syntax.scss` for syntax highlighting
+code {
+	font-family: $code-block-font;
+	font-weight: 400;
+}
+
+// inline code
+li code, p code {
+	background: $background-alt-color;
+	border-radius: 2px;
+	font-family: $code-block-font;
+	font-weight: 300;
+	padding: 0 8px;
+}
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Typography
@@ -33,7 +47,7 @@ h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: $text-dark-color;
+	color: $headline-text-color;
 
 	&:first-child {
 		margin-top: 0;
@@ -60,7 +74,6 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	margin-top: 40px;
 	font-size: $h2-small;
 	font-weight: $h2-weight;
 	line-height: $h2-lineheight;
@@ -80,7 +93,6 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	margin-top: 40px;
 	font-size: $h3-small;
 	font-weight: $h3-weight;
 	line-height: $h3-lineheight;
@@ -96,7 +108,6 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	margin-top: 25px;
 	font-size: $h4-small;
 	font-weight: $h4-weight;
 	line-height: $h4-lineheight;
@@ -112,7 +123,6 @@ h4, .h4 {
 }
 
 h5, .h5 {
-	margin-top: 15px;
 	font-size: $h5-small;
 	font-weight: $h5-weight;
 	line-height: $h5-lineheight;
@@ -128,7 +138,6 @@ h5, .h5 {
 }
 
 h6, .h6 {
-	margin-top: 15px;
 	font-size: $h6-small;
 	font-weight: $h6-weight;
 	line-height: $h6-lineheight;
@@ -144,7 +153,7 @@ h6, .h6 {
 }
 
 p, ul, ol {
-	margin-top: 30px;
+	margin-top: 16px;
 	font-size: $p-small;
 	font-weight: $p-weight;
 	line-height: $p-lineheight;
@@ -165,6 +174,15 @@ p, ul, ol {
 	&:first-child {
 		margin-top: 0;
 	}
+}
+
+h2, h3, h4, h5, h6 {
+	margin-top: 56px;
+}
+
+// no margin between headings and paragraphs
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+	margin-top: 16px;
 }
 
 ul, ol {
@@ -209,7 +227,7 @@ blockquote {
 
 a {
 	text-decoration: none;
-	color: $text-dark-color;
+	color: $link-text-color;
 	font-weight: $bold-weight;
 	@include transition(all 0.15s ease-in-out);
 
@@ -273,8 +291,8 @@ a {
 
 .button--light {
 	background: transparent;
-	border-color: $text-dark-color;
-	color: $text-dark-color;
+	border-color: $dark-text-color;
+	color: $dark-text-color;
 
 	&:hover {
 		background: $accent-color;
@@ -342,7 +360,7 @@ body.loading {
 	svg {
 		width: 100%;
 		height: 100%;
-		fill: rgba($text-dark-color,0.2);
+		fill: rgba($dark-text-color,0.2);
 	}
 }
 
@@ -398,6 +416,7 @@ section {
 	position: relative;
 	margin: 0 auto;
 	padding: 0 20px;
+	max-width: 1500px;
 
 	@include mq(tabletp) {
 		padding: 0 80px;
