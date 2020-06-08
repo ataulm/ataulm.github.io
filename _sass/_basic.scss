@@ -20,11 +20,13 @@ body {
 	color: $color-text-body;
 }
 
+// code blocks, see `_syntax.scss` for syntax highlighting
 code {
 	font-family: $code-block-font;
 	font-weight: 400;
 }
 
+// inline code
 li code, p code {
 	background: $color-background-alt;
 	border-radius: 2px;
