@@ -47,70 +47,70 @@ $bold-weight: 600;
 $sitetitle-small: 27px;
 $sitetitle-medium: 32px;
 $sitetitle-large: 40px;
-$sitetitle-weight: 600;
+$sitetitle-weight: $bold-weight;
 $sitetitle-spacing: 0em;
 
 $sitetagline-small: 16px;
 $sitetagline-medium: 18px;
 $sitetagline-large: 20px;
-$sitetagline-weight: 400;
+$sitetagline-weight: $regular-weight;
 $sitetagline-spacing: 0em;
 $sitetagline-lineheight: 1.5;
 
 $menu-small: 16px;
 $menu-medium: 18px;
 $menu-large: 20px;
-$menu-weight: 600;
+$menu-weight: $bold-weight;
 $menu-spacing: 0em;
 
 $h1-small: 27px;
 $h1-medium: 38px;
 $h1-large: 50px;
-$h1-weight: 600;
+$h1-weight: $bold-weight;
 $h1-spacing: -0.02em;
 $h1-lineheight: 1.2;
 
 $h2-small: 27px;
 $h2-medium: 38px;
 $h2-large: 50px;
-$h2-weight: 600;
+$h2-weight: $bold-weight;
 $h2-spacing: -0.02em;
 $h2-lineheight: 1.2;
 
 $h3-small: 22px;
 $h3-medium: 25px;
 $h3-large: 30px;
-$h3-weight: 400;
+$h3-weight: $bold-weight;
 $h3-spacing: -0.02em;
 $h3-lineheight: 1.3;
 
 $h4-small: 17px;
 $h4-medium: 22px;
 $h4-large: 22px;
-$h4-weight: 400;
+$h4-weight: $regular-weight;
 $h4-spacing: 0em;
 $h4-lineheight: 1.6;
 
 $h5-small: 17px;
 $h5-medium: 20px;
 $h5-large: 20px;
-$h5-weight: 400;
+$h5-weight: $regular-weight;
 $h5-spacing: 0em;
 $h5-lineheight: 1.6;
 
 $h6-small: 17px;
 $h6-medium: 20px;
 $h6-large: 20px;
-$h6-weight: 400;
+$h6-weight: $regular-weight;
 $h6-spacing: 0em;
 $h6-lineheight: 1.6;
 
 $p-small: 17px;
 $p-medium: 19px;
 $p-large: 22px;
-$p-weight: 400;
+$p-weight: $regular-weight;
 $p-spacing: 0em;
-$p-lineheight: 2;
+$p-lineheight: 1.6;
 
 $blockquote-small: 25px;
 $blockquote-medium: 35px;
@@ -119,7 +119,7 @@ $blockquote-weight: 300;
 $blockquote-spacing: -0.02em;
 $blockquote-lineheight: 1.6;
 
-$button-weight: 600;
+$button-weight: $bold-weight;
 $button-spacing: 0em;
 
 
