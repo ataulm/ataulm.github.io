@@ -23,7 +23,7 @@
 	.subtitle {
 		margin-top: 5px;
 		text-align: center;
-		color: $color-text-light;
+		color: $light-text-color;
 	}
 
 	h1, h2, h3, h4, h5, h6, p, ul, ol {
@@ -88,7 +88,7 @@
 
 	p a {
 		font-weight: $regular-weight;
-		border-bottom: 2px solid $color-accent;
+		border-bottom: 2px solid $accent-color;
 	}
 
 	p .button {
@@ -148,11 +148,11 @@
 	}
 
 	table {
-		border: 2px solid $color-text-dark;
+		border: 2px solid $dark-text-color;
 
 		thead {
-			background: $color-text-dark;
-			color: $color-background;
+			background: $dark-text-color;
+			color: $background-color;
 			text-align: left;
 			font-weight: $bold-weight;
 
@@ -179,7 +179,7 @@
 		tr {
 
 			&:nth-child(2n) {
-				background: $color-background-alt;
+				background: $background-alt-color;
 			}
 		}
 	}
@@ -192,14 +192,14 @@
 		border-radius: 100%;
 		border-bottom: none;
 		padding: 1px 3px;
-		background: $color-background-alt;
+		background: $background-alt-color;
 		font-size: 10px;
 		text-align: center;
-		color: $color-text-light;
+		color: $light-text-color;
 
 		&:hover {
-			background: $color-text-light;
-			color: $color-background;
+			background: $light-text-color;
+			color: $background-color;
 		}
 	}
 
@@ -233,11 +233,11 @@
 					border-radius: 100%;
 					border-bottom: none;
 					padding: 2px 3px;
-					background: $color-background-alt;
+					background: $background-alt-color;
 					font-size: 11px;
 					font-weight: $bold-weight;
 					text-align: center;
-					color: $color-text-light;
+					color: $light-text-color;
 				}
 				
 				p {

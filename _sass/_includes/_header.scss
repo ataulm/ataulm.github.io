@@ -56,10 +56,10 @@
 	font-weight: $sitetitle-weight;
 	letter-spacing: $sitetitle-spacing;
 	line-height: 1;
-	color: $color-text-headline;
+	color: $headline-text-color;
 
 	&:hover {
-		color: $color-accent;
+		color: $accent-color;
 	}
 
 	@include mq(tabletp) {
@@ -123,11 +123,11 @@
 .menu__list__item__link {
 	font-size: $menu-small;
 	font-weight: $menu-weight;
-	color: $color-text-link;
+	color: $link-text-color;
 	border-bottom: 2px solid transparent;
 
 	&:hover {
-		color: $color-accent;
+		color: $accent-color;
 	}
 
 	@include mq(tabletp) {
@@ -139,6 +139,6 @@
 	}
 	
 	&.active-link {
-		border-bottom-color: $color-accent;
+		border-bottom-color: $accent-color;
 	}
 }

@@ -12,12 +12,12 @@ html, body {
 }
 
 body {
-	background: $color-background;
+	background: $background-color;
 	font-family: $body-font;
 	font-weight: $regular-weight;
 	font-style: normal;
 	line-height: 1;
-	color: $color-text-body;
+	color: $body-text-color;
 }
 
 // code blocks, see `_syntax.scss` for syntax highlighting
@@ -28,7 +28,7 @@ code {
 
 // inline code
 li code, p code {
-	background: $color-background-alt;
+	background: $background-alt-color;
 	border-radius: 2px;
 	font-family: $code-block-font;
 	font-weight: 300;
@@ -47,7 +47,7 @@ h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: $color-text-headline;
+	color: $headline-text-color;
 
 	&:first-child {
 		margin-top: 0;
@@ -227,12 +227,12 @@ blockquote {
 
 a {
 	text-decoration: none;
-	color: $color-text-link;
+	color: $link-text-color;
 	font-weight: $bold-weight;
 	@include transition(all 0.15s ease-in-out);
 
 	&:hover {
-		color: $color-accent;
+		color: $accent-color;
 	}
 }
 
@@ -241,10 +241,10 @@ a {
 	padding: 9px 10px 10px;
 	font-size: 13px;
 	line-height: 1;
-	border: 2px solid $color-accent;
+	border: 2px solid $accent-color;
 	border-radius: 3px;
-	background: $color-accent;
-	color: $color-background;
+	background: $accent-color;
+	color: $background-color;
 	font-weight: $button-weight;
 	letter-spacing: $button-spacing;
 	cursor: pointer;
@@ -255,9 +255,9 @@ a {
 	}
 
 	&:hover {
-		background: adjust-hue($color-accent,15%);
-		border-color: adjust-hue($color-accent,15%);
-		color: $color-background;
+		background: adjust-hue($accent-color,15%);
+		border-color: adjust-hue($accent-color,15%);
+		color: $background-color;
 	}
 
 	svg {
@@ -291,13 +291,13 @@ a {
 
 .button--light {
 	background: transparent;
-	border-color: $color-text-dark;
-	color: $color-text-dark;
+	border-color: $dark-text-color;
+	color: $dark-text-color;
 
 	&:hover {
-		background: $color-accent;
-		border-color: $color-accent;
-		color: $color-background;
+		background: $accent-color;
+		border-color: $accent-color;
+		color: $background-color;
 	}
 }
 
@@ -305,11 +305,11 @@ hr {
 	margin: 40px 0;
 	border: 0;
 	height: 2px;
-	background: $color-border;
+	background: $border-color;
 }
 
-::selection 	 { background: $color-accent; color: $color-background; }
-::-moz-selection { background: $color-accent; color: $color-background; }
+::selection 	 { background: $accent-color; color: $background-color; }
+::-moz-selection { background: $accent-color; color: $background-color; }
 
 
 
@@ -360,7 +360,7 @@ body.loading {
 	svg {
 		width: 100%;
 		height: 100%;
-		fill: rgba($color-text-dark,0.2);
+		fill: rgba($dark-text-color,0.2);
 	}
 }
 

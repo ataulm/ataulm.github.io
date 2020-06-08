@@ -26,7 +26,7 @@
 	display: block;
 	margin-top: 10px;
 	font-size: 13px;
-	color: $color-text-light;
+	color: $light-text-color;
 
 	@include mq(tabletp) {
 		margin-top: 20px;
@@ -34,11 +34,11 @@
 
 	a {
 		margin-left: 10px;
-		color: $color-text-light;
+		color: $light-text-color;
 		font-weight: $regular-weight;
 
 		&:hover {
-			color: $color-text-body;
+			color: $body-text-color;
 		}
 	}
 }
