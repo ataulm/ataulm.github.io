@@ -18,6 +18,9 @@ $color-background: #ffffff;
 $color-background-alt: #f4f5f6;
 $color-border: #f7d7b6;
 
+$color-code-block-background: #212121;
+$color-code-block-text-default: #fff;
+
 $color-text-dark: #2A2F36;
 $color-text-light: #ABB7B7;
 $color-text-headline: $color-text-dark;
@@ -33,6 +36,7 @@ $color-error: #d64541;
 // _data/settings.yml has `font_settings.font_embed`
 $body-font: 'Fira Sans', sans-serif;
 $title-font: 'Fira Sans', sans-serif;
+$code-block-font: 'Fira Code', monospace;
 
 $regular-weight: 400;
 $bold-weight: 600;

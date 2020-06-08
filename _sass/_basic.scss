@@ -20,6 +20,18 @@ body {
 	color: $color-text-body;
 }
 
+code {
+	font-family: $code-block-font;
+	font-weight: 400;
+}
+
+li code, p code {
+	background: $color-background-alt;
+	border-radius: 2px;
+	font-family: $code-block-font;
+	font-weight: 300;
+	padding: 0 8px;
+}
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Typography
