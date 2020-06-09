@@ -22,7 +22,7 @@ body {
 
 // code blocks, see `_syntax.scss` for syntax highlighting
 code {
-	font-family: $code-block-font;
+	font-family: $code-font;
 	font-weight: 400;
 }
 
@@ -30,9 +30,18 @@ code {
 li code, p code {
 	background: $background-alt-color;
 	border-radius: 2px;
-	font-family: $code-block-font;
-	font-weight: 300;
+	font-family: $code-font;
+	font-size: $code-inline-small;
+	font-weight: $code-inline-weight;
 	padding: 0 8px;
+
+	@include mq(tabletp) {
+		font-size: $code-inline-medium;
+	}
+
+	@include mq(laptop) {
+		font-size: $code-inline-large;
+	}
 }
 
 
@@ -153,7 +162,7 @@ h6, .h6 {
 }
 
 p, ul, ol {
-	margin-top: 16px;
+	margin-top: 32px;
 	font-size: $p-small;
 	font-weight: $p-weight;
 	line-height: $p-lineheight;

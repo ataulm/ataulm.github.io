@@ -1,6 +1,7 @@
 ---
 title: "Refactoring Android Themes with Style: Restructuring Themes"
 excerpt: Last year, Nick Butcher and Chris Banes presented "Developing Themes with Style" at Droidcon Berlin. It was a welcome recap for themes and styles, as well as best practices for Android theming. We’ve been working to apply these best practices to the Android app at Monzo. For us, the challenge lay more in how we could make these changes safely, over time. In other words, how we can refactor our themes.
+
 ---
 
 Last year, [Nick Butcher](https://twitter.com/crafty) and [Chris Banes](https://twitter.com/chrisbanes) presented ["Developing Themes with Style"](https://chris.banes.dev/talks/2019/developing-themes-with-style-berlin/) at Droidcon Berlin. It was a welcome recap for themes and styles, as well as best practices for Android theming.
