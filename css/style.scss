@@ -36,8 +36,9 @@ $error-color: #d64541;
 // _data/settings.yml has `font_settings.font_embed`
 $body-font: 'Fira Sans', sans-serif;
 $title-font: 'Fira Sans', sans-serif;
-$code-block-font: 'Fira Code', monospace;
+$code-font: 'Fira Code', monospace;
 
+$code-inline-weight: 300;
 $regular-weight: 400;
 $bold-weight: 600;
 
@@ -111,6 +112,10 @@ $p-large: 22px;
 $p-weight: $regular-weight;
 $p-spacing: 0em;
 $p-lineheight: 1.6;
+
+$code-inline-small: 16px;
+$code-inline-medium: 18px;
+$code-inline-large: 21px;
 
 $blockquote-small: 25px;
 $blockquote-medium: 35px;
