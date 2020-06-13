@@ -444,7 +444,12 @@ section {
 	}
 }
 
-
+// We embed tweets in center tags but they use inline styles (margin-top 10px) so we can't set margins
+// center tags following p tags could map to other things too, so be mindful
+p + center {
+	margin-top: 38px;
+	margin-bottom: 8px;
+}
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Buy CTA
 
