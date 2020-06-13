@@ -95,7 +95,6 @@
 		margin-top: 10px;
 	}
 
-	.highlighter-rouge,
 	table {
 		margin: 20px auto;
 		width: 100%;
@@ -115,6 +114,28 @@
 
 		@include mq(desktop) {
 			max-width: 65%;
+		}
+	}
+
+	.highlighter-rouge {
+		margin: 24px auto;
+		width: 100%;
+
+		@include mq(tabletp) {
+			margin: 32px auto;
+		}
+
+		@include mq(tabletl) {
+			max-width: 75%;
+		}
+
+		@include mq(laptop) {
+			margin: 48px auto;
+			max-width: 100%;
+		}
+
+		@include mq(desktop) {
+			max-width: 100%;
 		}
 	}
 
