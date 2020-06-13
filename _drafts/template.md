@@ -21,13 +21,58 @@ Here’s the opening for the new section. We use curly quotes and apostrophes:
 
 Here’s an image:
 
-![alt text](/images/article-directory/image.png)
+![alt text](/images/monzo-plus-cards/sketch-fan.png)
 
 <!-- Code blocks should specify the language for syntax highlighting -->
 ```kotlin
-class MyKotlinClass {
-    // hello world
+package com.ataulm.whatsnext
+
+import androidx.recyclerview.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import kotlinx.android.synthetic.main.view_film_summary.view.*
+
+class FilmSummaryViewHolder internal constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+    fun bind(filmSummary: FilmSummary, callback: Callback) {
+        itemView.setOnClickListener { callback.onClick(filmSummary) }
+        itemView.contentDescription = filmSummary.name + " (" + filmSummary.year + ")"
+        itemView.film_summary_text_name.text = filmSummary.name + " (" + filmSummary.year + ")"
+    }
+
+    interface Callback {
+
+        fun onClick(filmSummary: FilmSummary)
+    }
+
+    companion object {
+
+        @JvmStatic
+        fun inflateView(parent: ViewGroup): FilmSummaryViewHolder {
+            var variable = 90
+            var skaj = null
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.view_film_summary, parent, false)
+            return FilmSummaryViewHolder(view)
+        }
+    }
 }
+```
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Muvi" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Color attributes -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Muvi.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Muvi.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Muvi.LargeComponent</item>
+        <!-- Widget style attributes -->
+        <item name="chipStyle">@style/Widget.Muvi.Chip.Action</item>
+        <item name="chipStandaloneStyle">@style/Widget.Muvi.Chip.Entry</item>
+    </style>
+</resources>
 ```
 
 <!-- Link to another blog on Jekyll with the post_url -->
