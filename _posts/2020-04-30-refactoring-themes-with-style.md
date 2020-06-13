@@ -244,8 +244,12 @@ Now, both status bar attributes will be set together only on v23 and above, and 
 
 ## What’s next?
 
-From here, we’ll look at default styles and how they help us de-duplicate code, improve consistency, and strengthen our themes.
+We’ll look at default styles and how they help us de-duplicate code, improve consistency, and strengthen our themes - [check it out here]({% post_url 2020-05-07-refactoring-themes-with-style-default-styles %})!
 
-Stay tuned for part two of this series on refactoring themes. In the meantime, please [let me know if you found this post helpful](https://twitter.com/ataulm), or if you have any comments or questions (or corrections!).
+In the meantime, please let me know if you found this post helpful, or if you have any comments or questions (or corrections!), let me know on Twitter:
+
+<center>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I wrote about how we at <a href="https://twitter.com/MakingMonzo?ref_src=twsrc%5Etfw">@MakingMonzo</a> approached the seemingly overwhelming task of tidying our themes on Android. Check it out and let us know how you&#39;d have tackled this in your projects!<br><br>Thanks <a href="https://twitter.com/emmaguy?ref_src=twsrc%5Etfw">@emmaguy</a> <a href="https://twitter.com/chrisbanes?ref_src=twsrc%5Etfw">@chrisbanes</a> for the 👀 <a href="https://twitter.com/hashtag/androiddev?src=hash&amp;ref_src=twsrc%5Etfw">#androiddev</a> <a href="https://twitter.com/hashtag/gde?src=hash&amp;ref_src=twsrc%5Etfw">#gde</a> <a href="https://t.co/rZOftd4z8G">https://t.co/rZOftd4z8G</a></p>&mdash; ataúl ✏️ (@ataulm) <a href="https://twitter.com/ataulm/status/1255791917473947648?ref_src=twsrc%5Etfw">April 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
 
 _Thanks [Emma](https://twitter.com/emmaguy) and [Chris](https://twitter.com/chrisbanes) for the reviews._

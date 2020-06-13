@@ -95,29 +95,7 @@
 		margin-top: 10px;
 	}
 
-	table {
-		margin: 20px auto;
-		width: 100%;
-
-		@include mq(tabletp) {
-			margin: 30px auto;
-		}
-
-		@include mq(tabletl) {
-			max-width: 75%;
-		}
-
-		@include mq(laptop) {
-			margin: 40px auto;
-			max-width: 70%;
-		}
-
-		@include mq(desktop) {
-			max-width: 65%;
-		}
-	}
-
-	.highlighter-rouge {
+	table, .highlighter-rouge {
 		margin: 24px auto;
 		width: 100%;
 
