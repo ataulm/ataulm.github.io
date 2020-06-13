@@ -148,13 +148,11 @@
 	}
 
 	table {
-		border: 2px solid $dark-text-color;
+		border: 1px solid $border-color;
 
 		thead {
-			background: $dark-text-color;
-			color: $background-color;
+			color: $body-text-color;
 			text-align: left;
-			font-weight: $bold-weight;
 
 			th {
 				font-weight: $bold-weight;
@@ -162,24 +160,17 @@
 		}
 
 		th, td {
-			padding: 10px;
+			padding: 8px;
 			font-size: $p-small;
 			font-weight: $p-weight;
 
 			@include mq(tabletp) {
-				padding: 15px;
+				padding: 16px;
 				font-size: $p-medium;
 			}
 
 			@include mq(laptop) {
-				padding: 20px;
-			}
-		}
-		
-		tr {
-
-			&:nth-child(2n) {
-				background: $background-alt-color;
+				padding: 24px;
 			}
 		}
 	}

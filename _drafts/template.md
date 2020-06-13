@@ -10,6 +10,10 @@ This template includes some of things that you always forget when you’re writi
 
 Be sure to remove the comments before publishing!
 
+Before | After
+---|---
+Stuff before | stuff after
+
 <!-- Use h2 for section headings -->
 ## Here’s a new section
 
