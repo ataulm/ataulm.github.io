@@ -18,10 +18,6 @@ featured_image: /images/avatar.png
 				<p class="listing-post__subtitle">{{ post.date | date_to_long_string }}</p>
 			</div>
 
-			{% if post.featured_image %}
-			<a href="{{ post.url | relative_url }}" class="listing-post__image" style="background-image: url({{ post.featured_image | relative_url }});"></a>
-			{% endif %}
-
 			<div class="listing-post__content">
 				<p>{{ post.excerpt }}</p>
 				<p><a href="{{ post.url | relative_url }}" class="button">Read More</a>
@@ -39,16 +35,18 @@ featured_image: /images/avatar.png
 
 <section class="pagination">
 
-	{% if paginator.previous_page %}
-	<div class="pagination__prev">
-		<a href="{{ paginator.previous_page_path | relative_url }}" class="button button--large"><i class="fa fa-angle-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
-	</div>
-	{% endif %}
-	{% if paginator.next_page %}
-	<div class="pagination__next">
-		<a href="{{ paginator.next_page_path | relative_url }}" class="button button--large"><span>Older Posts</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-	</div>
-	{% endif %}
+    {% if paginator.previous_page %}
+    <div class="pagination__prev">
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="button button--large"><i
+                class="fa fa-angle-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
+    </div>
+    {% endif %}
+    {% if paginator.next_page %}
+    <div class="pagination__next">
+        <a href="{{ paginator.next_page_path | relative_url }}" class="button button--large"><span>Older Posts</span> <i
+                class="fa fa-angle-right" aria-hidden="true"></i></a>
+    </div>
+    {% endif %}
 
 </section>
 
