@@ -1,5 +1,6 @@
 ---
 title: "Refactoring Android Themes with Style: Theme Overlays"
+hero_image: /images/refactoring-themes-theme-overlays/hero-image.png
 excerpt: This is part three of a series on refactoring themes and styles. Theme overlays are used to override values from your theme. At Monzo, we leverage theme overlays in different ways and this post highlights three cases where we’ve found using them to be helpful.
 
 ---

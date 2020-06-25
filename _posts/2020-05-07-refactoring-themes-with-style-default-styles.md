@@ -1,5 +1,6 @@
 ---
 title: "Refactoring Android Themes with Style: Default Styles"
+hero_image: /images/refactoring-themes-default-styles/hero-image.png
 excerpt: This is part two of a series on refactoring themes and styles. In this post, we’ll briefly cover what default styles are, how to use them, and why they belong (for the most part) in your base theme.
 
 ---
